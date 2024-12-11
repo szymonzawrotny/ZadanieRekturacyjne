@@ -38,7 +38,7 @@
             background-size: cover;
         }
         .container::before{
-            content: "4881";
+            content: attr(data-number);
             position: absolute;
             bottom:0;
             right:-50%;
@@ -67,9 +67,9 @@
                 width:20px;
                 height:20px;
                 position: relative;
-                img{
-                    @include imgCenter();
-                }
+                background-image: url("../../public/verify.png");
+                background-position: center center;
+                background-size: cover;
             }
         }
         .text{
@@ -86,9 +86,9 @@
             position: relative;
             width:50%;
             height:50%;
-            img{
-                @include imgCenter();
-            }
+            background-image: url("../../public/menu.png");
+            background-position: center center;
+            background-size: cover;
         }
     }
 }
