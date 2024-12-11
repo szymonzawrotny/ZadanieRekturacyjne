@@ -1,5 +1,5 @@
 import "./style.scss"
-import UserPanel from "./UserPanel";
+import UserPanel from "./component/UserPanel";
 
 const App = ()=>{
   return(
