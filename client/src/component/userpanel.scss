@@ -1,17 +1,13 @@
-@mixin imgCenter{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    max-width: 100%;
-    height:auto;
+@mixin addBackground($path) {
+    background-image: url($path);
+    background-position: center center;
+    background-size: cover;
 }
 
 .userPanel{
     width:420px;
     height:80px;
     display: flex;
-    transition: .3s ease-in-out;
     user-select: none;
     .icon{
         flex-basis:80px;
@@ -21,7 +17,12 @@
             border-radius: 50%;
             position: relative;
             img{
-                @include imgCenter();
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                max-width: 100%;
+                height:auto;
             }
         }
         .container::after{
@@ -33,9 +34,7 @@
             right:-3px;
             border-radius: 50%;
             border:3px solid white;
-            background-image: url("../../public/component.png");
-            background-position: center center;
-            background-size: cover;
+            @include addBackground("../../public/component.png");
         }
         .container::before{
             content: attr(data-number);
@@ -67,9 +66,7 @@
                 width:20px;
                 height:20px;
                 position: relative;
-                background-image: url("../../public/verify.png");
-                background-position: center center;
-                background-size: cover;
+                @include addBackground("../../public/verify.png");
             }
         }
         .text{
@@ -86,9 +83,7 @@
             position: relative;
             width:50%;
             height:50%;
-            background-image: url("../../public/menu.png");
-            background-position: center center;
-            background-size: cover;
+            @include addBackground("../../public/menu.png")
         }
     }
 }
