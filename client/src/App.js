@@ -1,9 +1,12 @@
 import "./style.scss"
+import UserPanel from "./UserPanel";
 
 const App = ()=>{
+
+
   return(
     <div className="app">
-      <h1>zadanko</h1>
+      <UserPanel />
     </div>
   )
 }
